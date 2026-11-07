@@ -1,0 +1,966 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>韩剧网-2026韩剧推荐_热播韩剧排行榜_韩剧tv在线观看指南</title>
+  <meta name="description" content="韩剧网是为韩剧迷打造的内容专题站，集中整理2026热播韩剧、经典韩剧推荐、新剧更新时间与追剧指南。涵盖爱情、悬疑、古装、职场等类型，提供排行榜、深度解析、常见问题与用户讨论，帮你快速找到想看的韩剧。">
+  <meta name="keywords" content="韩剧网,韩剧推荐,热播韩剧,韩剧排行榜,韩剧tv">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b6e6e'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3E韩%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f2f7f7;
+      --surface: #ffffff;
+      --surface-soft: #e6f2f2;
+      --primary: #0b6e6e;
+      --primary-dark: #084f4f;
+      --primary-light: #d0ecec;
+      --accent: #2a9d8f;
+      --text: #1e2e2e;
+      --text-soft: #4a6363;
+      --text-muted: #7a9a9a;
+      --border: #d5e4e4;
+      --shadow: 0 8px 20px rgba(0, 50, 50, 0.08);
+      --shadow-hover: 0 14px 28px rgba(0, 60, 60, 0.12);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .site-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 顶部导航 */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      padding: 6px 12px;
+      border-radius: 40px;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 10px rgba(11, 110, 110, 0.3);
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--primary-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-soft);
+    }
+
+    .nav-links a {
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .search-mini {
+      display: flex;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 4px 4px 4px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .search-mini input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14px;
+      width: 160px;
+      color: var(--text);
+    }
+
+    .search-mini button {
+      background: var(--primary);
+      border: none;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: default;
+      transition: background 0.2s;
+    }
+
+    .search-mini button:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Banner */
+    .magazine-banner {
+      background: linear-gradient(135deg, #0b6e6e 0%, #2a9d8f 100%);
+      border-radius: var(--radius-lg);
+      padding: 40px 32px;
+      margin: 28px 0 32px;
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .magazine-banner::after {
+      content: "K-DRAMA";
+      position: absolute;
+      right: -20px;
+      bottom: -30px;
+      font-size: 110px;
+      font-weight: 900;
+      color: rgba(255, 255, 255, 0.06);
+      pointer-events: none;
+      letter-spacing: 6px;
+      font-family: var(--font);
+    }
+
+    .banner-content {
+      flex: 1 1 400px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner-content h1 {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+
+    .banner-content p {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .banner-search {
+      display: flex;
+      background: #fff;
+      border-radius: 60px;
+      padding: 6px 6px 6px 20px;
+      max-width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .banner-search input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 15px;
+      background: transparent;
+    }
+
+    .banner-search button {
+      background: var(--primary);
+      border: none;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: default;
+    }
+
+    .banner-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner-tags span {
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* 通用section */
+    section {
+      margin-bottom: 44px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .section-header h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: -0.3px;
+    }
+
+    .section-header .more-link {
+      font-size: 14px;
+      color: var(--primary);
+      font-weight: 600;
+      border-bottom: 1px dashed var(--primary);
+    }
+
+    /* 内容简介 */
+    .intro-box {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      font-size: 15.5px;
+      color: var(--text-soft);
+      line-height: 1.8;
+    }
+
+    .intro-box strong {
+      color: var(--primary-dark);
+    }
+
+    /* 热门推荐卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .drama-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 20px 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .drama-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-cover {
+      height: 100px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #0b6e6e, #2a9d8f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .card-cover.v1 { background: linear-gradient(135deg, #1d3557, #457b9d); }
+    .card-cover.v2 { background: linear-gradient(135deg, #6d597a, #b56576); }
+    .card-cover.v3 { background: linear-gradient(135deg, #2d6a4f, #40916c); }
+    .card-cover.v4 { background: linear-gradient(135deg, #bc6c25, #dda15e); }
+    .card-cover.v5 { background: linear-gradient(135deg, #3a5a40, #588157); }
+    .card-cover.v6 { background: linear-gradient(135deg, #5f0f40, #9a031e); }
+
+    .drama-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.2px;
+    }
+
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-soft);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border);
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 12px;
+    }
+
+    .update-item {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      transition: background 0.2s;
+    }
+
+    .update-item:hover {
+      background: var(--surface-soft);
+    }
+
+    .update-time {
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 700;
+      background: var(--primary-light);
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .update-text {
+      font-size: 14.5px;
+      color: var(--text);
+    }
+
+    .update-text strong {
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 16px 8px;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--primary-dark);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: 0.15s;
+      cursor: default;
+    }
+
+    .category-item:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 32px 34px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      font-size: 15.5px;
+      line-height: 1.85;
+      color: var(--text-soft);
+    }
+
+    .deep-dive h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 18px;
+    }
+
+    .deep-dive p {
+      margin-bottom: 16px;
+    }
+
+    .deep-dive strong {
+      color: var(--primary-dark);
+    }
+
+    /* FAQ 卡片问答方式 */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .faq-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .faq-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .faq-card p {
+      font-size: 14.5px;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    /* 评论社区短评风格 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .comment-item {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .comment-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .comment-nick {
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--primary-dark);
+    }
+
+    .comment-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    .comment-text {
+      font-size: 14.5px;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    /* 资讯卡片 */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .news-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: 0.2s;
+    }
+
+    .news-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-date {
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .news-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .news-card p {
+      font-size: 14px;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    /* 底部 */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 20px;
+      margin-top: 20px;
+      color: var(--text-muted);
+      font-size: 13.5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-soft);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .magazine-banner {
+        padding: 28px 20px;
+      }
+      .banner-content h1 {
+        font-size: 26px;
+      }
+      .banner-content p {
+        font-size: 14px;
+      }
+      .banner-search {
+        max-width: 100%;
+      }
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .search-mini input {
+        width: 100px;
+      }
+      .update-list {
+        grid-template-columns: 1fr;
+      }
+      .site-footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- 导航 -->
+    <header class="top-nav">
+      <div class="logo-area">
+        <div class="logo-badge">韩剧网</div>
+        <span class="logo-text">K-DRAMA HUB</span>
+      </div>
+      <nav class="nav-links">
+        <a href="/#hot-recommend">热门推荐</a>
+        <a href="/#latest-update">最新更新</a>
+        <a href="/#deep-analysis">深度解析</a>
+        <a href="/#faq-section">常见问题</a>
+        <a href="/#community-comments">用户评论</a>
+        <a href="/#news-stream">相关资讯</a>
+      </nav>
+      <div class="search-mini">
+        <input type="text" placeholder="搜索韩剧、演员、类型..." readonly>
+        <button>搜索</button>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="magazine-banner">
+      <div class="banner-content">
+        <h1>韩剧网 · 2026追剧风向标</h1>
+        <p>从热播排行到深度剧评，从演员动态到类型解析，一站式韩剧内容专题。每周更新热门韩剧、经典回顾与观看指南。</p>
+        <div class="banner-search">
+          <input type="text" placeholder="输入剧名 / 演员 / 类型 如：爱情、悬疑" readonly>
+          <button>搜剧</button>
+        </div>
+      </div>
+      <div class="banner-tags">
+        <span># 热播韩剧</span>
+        <span># 2026新剧</span>
+        <span># 古装罗曼史</span>
+        <span># 悬疑烧脑</span>
+        <span># 职场治愈</span>
+        <span># 经典重温</span>
+        <span># 收视率排行</span>
+      </div>
+    </section>
+
+    <!-- 内容简介 -->
+    <section id="intro-section">
+      <div class="intro-box">
+        <strong>韩剧网</strong> 是一个专注于韩剧内容聚合与深度推荐的专题站点。无论你是想追最新上线的水木剧、金土剧，还是想回顾《请回答》系列、《信号》等经典作品，这里都能帮你快速建立追剧清单。我们围绕<strong>韩剧推荐、热播韩剧排行榜、韩剧tv观看指南</strong>等需求，整理类型分类、演员阵容、剧情看点、更新日历与用户口碑。页面适合喜欢韩式爱情、悬疑推理、古装奇幻、职场治愈等类型的观众，也适合想了解韩国电视剧制作趋势和流行文化的读者。通过编辑精选、深度解析、常见问题与真实评论，你可以用更少的时间找到符合自己口味的韩剧，并且知道从哪一部开始看、怎么安排追剧顺序。收藏本页，随时获取韩剧网带来的最新动态。
+      </div>
+    </section>
+
+    <!-- 热门推荐 -->
+    <section id="hot-recommend">
+      <div class="section-header">
+        <h2>热门韩剧推荐 · 编辑精选</h2>
+        <span class="more-link">更多推荐 →</span>
+      </div>
+      <div class="card-grid">
+        <article class="drama-card">
+          <div class="card-cover v1">浪漫爱情</div>
+          <h3>《首尔月光》</h3>
+          <div class="tag-row"><span class="tag">爱情</span><span class="tag">都市</span><span class="tag">治愈</span></div>
+          <p class="card-desc">两个在首尔塔下错过的陌生人，十年后以建筑师和策展人身份重逢。细腻的情感推拉，适合喜欢慢节奏浪漫剧的观众。</p>
+          <div class="card-meta"><span>热度 9.2</span><span>更新至第12集</span></div>
+        </article>
+        <article class="drama-card">
+          <div class="card-cover v2">悬疑烧脑</div>
+          <h3>《无声证词》</h3>
+          <div class="tag-row"><span class="tag">悬疑</span><span class="tag">犯罪</span><span class="tag">推理</span></div>
+          <p class="card-desc">法医与侧写师联手调查连环失踪案，每集反转不断。节奏紧凑，适合喜欢《信号》风格的硬核推理迷。</p>
+          <div class="card-meta"><span>热度 9.5</span><span>更新至第8集</span></div>
+        </article>
+        <article class="drama-card">
+          <div class="card-cover v3">古装罗曼史</div>
+          <h3>《花郎之恋》</h3>
+          <div class="tag-row"><span class="tag">古装</span><span class="tag">爱情</span><span class="tag">权谋</span></div>
+          <p class="card-desc">王室公主与花郎武士的秘密情缘，夹杂宫廷权斗与成长线。服化道精致，感情线甜中带虐。</p>
+          <div class="card-meta"><span>热度 8.9</span><span>更新至第16集</span></div>
+        </article>
+        <article class="drama-card">
+          <div class="card-cover v4">职场治愈</div>
+          <h3>《我的解放日志2》</h3>
+          <div class="tag-row"><span class="tag">治愈</span><span class="tag">生活</span><span class="tag">职场</span></div>
+          <p class="card-desc">延续第一季的细腻笔触，聚焦职场人的疲惫与自我和解。台词真实，适合需要情绪共鸣的观众。</p>
+          <div class="card-meta"><span>热度 9.0</span><span>更新至第6集</span></div>
+        </article>
+        <article class="drama-card">
+          <div class="card-cover v5">奇幻喜剧</div>
+          <h3>《九尾狐餐厅》</h3>
+          <div class="tag-row"><span class="tag">奇幻</span><span class="tag">喜剧</span><span class="tag">美食</span></div>
+          <p class="card-desc">九尾狐在弘大经营深夜餐厅，用美食化解客人的烦恼。轻松搞笑带治愈，适合下饭观看。</p>
+          <div class="card-meta"><span>热度 8.7</span><span>更新至第10集</span></div>
+        </article>
+        <article class="drama-card">
+          <div class="card-cover v6">复仇爽剧</div>
+          <h3>《顶楼：清算》</h3>
+          <div class="tag-row"><span class="tag">复仇</span><span class="tag">悬疑</span><span class="tag">豪门</span></div>
+          <p class="card-desc">围绕财阀家族的权力斗争与复仇计划，反转密集。喜欢强冲突和狗血爽剧的观众不要错过。</p>
+          <div class="card-meta"><span>热度 9.3</span><span>更新至第14集</span></div>
+        </article>
+        <article class="drama-card">
+          <div class="card-cover v1">校园青春</div>
+          <h3>《二十，二十五》</h3>
+          <div class="tag-row"><span class="tag">青春</span><span class="tag">成长</span><span class="tag">友情</span></div>
+          <p class="card-desc">四个大学新生的迷茫与梦想，记录二十岁出头最真实的焦虑和心动。清新治愈，怀旧感拉满。</p>
+          <div class="card-meta"><span>热度 8.8</span><span>更新至第8集</span></div>
+        </article>
+        <article class="drama-card">
+          <div class="card-cover v2">科幻悬疑</div>
+          <h3>《记忆迷宫》</h3>
+          <div class="tag-row"><span class="tag">科幻</span><span class="tag">悬疑</span><span class="tag">心理</span></div>
+          <p class="card-desc">脑科学家进入患者记忆追查真相，每一层梦境都藏有线索。概念新颖，喜欢烧脑的观众值得一追。</p>
+          <div class="card-meta"><span>热度 9.1</span><span>更新至第10集</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 最新更新 -->
+    <section id="latest-update">
+      <div class="section-header">
+        <h2>最新更新 · 今日追剧日历</h2>
+        <span class="more-link">全部更新 →</span>
+      </div>
+      <div class="update-list">
+        <div class="update-item"><span class="update-time">今天 18:00</span><span class="update-text"><strong>《首尔月光》</strong> 第12集上线，男女主关系迎来重大转折</span></div>
+        <div class="update-item"><span class="update-time">今天 20:00</span><span class="update-text"><strong>《无声证词》</strong> 第8集更新，新线索指向警局内部</span></div>
+        <div class="update-item"><span class="update-time">今天 21:00</span><span class="update-text"><strong>《花郎之恋》</strong> 第16集播出，花郎团面临解散危机</span></div>
+        <div class="update-item"><span class="update-time">昨天 22:00</span><span class="update-text"><strong>《我的解放日志2》</strong> 第6集更新，职场线引发热议</span></div>
+        <div class="update-item"><span class="update-time">昨天 19:00</span><span class="update-text"><strong>《九尾狐餐厅》</strong> 第10集上线，新客人竟是前男友</span></div>
+        <div class="update-item"><span class="update-time">11月5日</span><span class="update-text"><strong>《顶楼：清算》</strong> 第14集更新，复仇计划进入白热化</span></div>
+        <div class="update-item"><span class="update-time">11月4日</span><span class="update-text"><strong>《二十，二十五》</strong> 第8集上线，五人帮友情出现裂痕</span></div>
+        <div class="update-item"><span class="update-time">11月3日</span><span class="update-text"><strong>《记忆迷宫》</strong> 第10集更新，主角记忆开始崩塌</span></div>
+        <div class="update-item"><span class="update-time">11月2日</span><span class="update-text"><strong>《无声证词》</strong> 第7集加更，法医团队内部信任危机</span></div>
+        <div class="update-item"><span class="update-time">11月1日</span><span class="update-text"><strong>《首尔月光》</strong> 第11集播出，收视率突破12%</span></div>
+      </div>
+    </section>
+
+    <!-- 分类入口 -->
+    <section id="category-entry">
+      <div class="section-header">
+        <h2>韩剧分类 · 按喜好筛选</h2>
+      </div>
+      <div class="category-grid">
+        <div class="category-item">浪漫爱情</div>
+        <div class="category-item">悬疑推理</div>
+        <div class="category-item">古装宫廷</div>
+        <div class="category-item">职场治愈</div>
+        <div class="category-item">奇幻喜剧</div>
+        <div class="category-item">校园青春</div>
+        <div class="category-item">复仇爽剧</div>
+        <div class="category-item">科幻脑洞</div>
+      </div>
+    </section>
+
+    <!-- 深度解析 -->
+    <section id="deep-analysis">
+      <div class="deep-dive">
+        <h2>韩剧网深度解析：为什么韩剧持续吸引观众</h2>
+        <p>在<strong>韩剧网</strong>的日常运营中，我们发现观众对韩剧的需求早已不限于“看脸”和“甜宠”。2026年的韩剧市场呈现出明显的类型融合趋势：爱情剧加入悬疑线，职场剧融入复仇元素，古装剧强调女性成长。这种复合类型让<strong>韩剧推荐</strong>变得更有层次，也让<strong>热播韩剧排行榜</strong>的竞争更加激烈。</p>
+        <p>从内容特点来看，韩剧最擅长的依然是情绪调动。无论是《首尔月光》里那种克制又深情的浪漫，还是《无声证词》中层层递进的紧张感，编剧都懂得在每一集结尾留下钩子。对于想要入坑的观众，我们建议先确定自己偏好的情绪类型：喜欢轻松治愈的可以从《九尾狐餐厅》《二十，二十五》开始；追求强情节和反转的直接看《顶楼：清算》《记忆迷宫》；如果偏爱细腻写实风，《我的解放日志2》会是不错的选择。</p>
+        <p>演员和角色塑造也是<strong>韩剧tv</strong>观众讨论的焦点。近年韩剧在选角上更加注重“适配度”而非单纯流量，许多新生代演员通过类型剧获得认可。比如《无声证词》中饰演法医的演员，用克制的表演撑起了大量独角戏。而《花郎之恋》则凭借精美的古装造型和青春群像吸引了不少海外观众。</p>
+        <p>关于节奏和消费体验，韩剧通常采用边拍边播模式，前两集往往承担世界观铺陈的任务，从第三集开始进入主线。如果你在<strong>韩剧网</strong>查找推荐，可以留意每部剧的“更新进度”和“集数长度”。12集短剧适合周末一口气刷完，16-20集的长剧则需要规划追更时间。此外，韩国电视台的水木剧、金土剧、周末剧在题材和尺度上略有差异，喜欢快节奏的可以优先选择有线台作品。</p>
+        <p>最后，读者搜索<strong>韩剧网</strong>通常是想了解三件事：最近有什么好看的、在哪里能看到、以及口碑如何。本页面通过热门推荐、最新更新、FAQ和用户评论等模块，尽量覆盖这些需求。当然，每个人的观剧口味不同，建议把本站作为筛选工具，再结合自己的时间安排做决定。后续我们也会持续更新<strong>韩剧推荐</strong>清单和深度剧评，帮助大家发现更多值得一看的作品。</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq-section">
+      <div class="section-header">
+        <h2>常见问题 · 关于韩剧网与追剧</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h4>韩剧网主要提供什么内容？</h4>
+          <p>韩剧网是一个内容聚合与推荐专题页，整理热播韩剧、经典作品、类型分类、更新日历和用户口碑。我们不提供在线播放，但会标注每部剧的类型、集数、更新状态和观看建议，帮助你在正版平台找到对应资源。</p>
+        </div>
+        <div class="faq-card">
+          <h4>2026年有哪些值得追的韩剧？</h4>
+          <p>根据目前热度与口碑，《首尔月光》《无声证词》《顶楼：清算》关注度较高。喜欢治愈系的可以看《我的解放日志2》和《九尾狐餐厅》，偏爱悬疑的推荐《记忆迷宫》。建议先看我们的热门推荐卡片，再结合类型标签筛选。</p>
+        </div>
+        <div class="faq-card">
+          <h4>韩剧一般在哪里观看比较方便？</h4>
+          <p>韩国本土通过KBS、MBC、SBS、tvN、JTBC等电视台播出，海外观众通常通过Netflix、Disney+、Wavve等流媒体平台观看。国内用户可关注正版引进平台。韩剧网只做信息整理，不提供片源，请支持正版。</p>
+        </div>
+        <div class="faq-card">
+          <h4>怎么判断一部韩剧适不适合自己？</h4>
+          <p>可以从三个维度判断：类型标签（爱情、悬疑、古装等）、更新进度（是否完结）、以及用户短评。韩剧网每张卡片都标注了热度和简短看点，FAQ也提供了入门建议。如果时间有限，优先选择12集短剧试看。</p>
+        </div>
+        <div class="faq-card">
+          <h4>韩剧的更新频率是怎样的？</h4>
+          <p>韩国迷你剧通常每周更新2集，水木剧在周三周四播出，金土剧在周五周六播出。部分周末剧每周更新2集。本页面“最新更新”栏目会模拟更新动态，实际更新时间以电视台和平台为准。</p>
+        </div>
+        <div class="faq-card">
+          <h4>为什么韩剧网推荐的作品和别的榜单不一样？</h4>
+          <p>韩剧网的推荐综合了编辑筛选、类型覆盖和用户讨论热度，不单纯依赖收视率。我们希望兼顾热门作品和小众佳作，因此榜单会定期调整。如果你有特别喜欢的类型，也可以通过分类入口快速定位。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 用户评论 -->
+    <section id="community-comments">
+      <div class="section-header">
+        <h2>用户评论 · 追剧er的实时讨论</h2>
+        <span class="more-link">参与讨论 →</span>
+      </div>
+      <div class="comment-list">
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">追</div><span class="comment-nick">追剧小分队</span><span class="comment-date">2026-11-06</span></div>
+          <p class="comment-text">《无声证词》真的越来越上头，第8集那个反转完全没想到。法医和侧写师的化学反应也很绝，希望后面别烂尾。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">月</div><span class="comment-nick">月光爱好者</span><span class="comment-date">2026-11-05</span></div>
+          <p class="comment-text">《首尔月光》第12集看得我眼泪直流，男女主在塔下那段对话太戳了。就是更新太慢，每周两集根本不够看。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">古</div><span class="comment-nick">古装控</span><span class="comment-date">2026-11-04</span></div>
+          <p class="comment-text">《花郎之恋》服化道真的用心，但剧情有点拖。第16集花郎团解散危机感觉是为了虐而虐，希望编剧后面能圆回来。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">治</div><span class="comment-nick">治愈系患者</span><span class="comment-date">2026-11-04</span></div>
+          <p class="comment-text">《我的解放日志2》还是第一季的味道，台词太真实了。每集看完都觉得被理解，适合下班后一个人静静看。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">九</div><span class="comment-nick">九尾狐粉丝</span><span class="comment-date">2026-11-03</span></div>
+          <p class="comment-text">《九尾狐餐厅》是近期最轻松的剧，美食镜头拍得很有食欲。虽然剧情有点老套，但下饭足够了。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">顶</div><span class="comment-nick">顶楼观众</span><span class="comment-date">2026-11-02</span></div>
+          <p class="comment-text">《顶楼：清算》的复仇线终于进入高潮，第14集结尾那个巴掌太爽了。不过有些逻辑不能细想，爽就完事。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">青</div><span class="comment-nick">青春回忆录</span><span class="comment-date">2026-11-01</span></div>
+          <p class="comment-text">《二十，二十五》让我想起大学时光，五人帮的友情线比爱情线更好看。希望后面不要强行三角恋。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">迷</div><span class="comment-nick">迷宫困住了</span><span class="comment-date">2026-10-31</span></div>
+          <p class="comment-text">《记忆迷宫》概念很吸引人，但第10集开始有点绕，需要仔细看细节。喜欢烧脑的可以追，想放松的不推荐。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">韩</div><span class="comment-nick">韩剧老饕</span><span class="comment-date">2026-10-30</span></div>
+          <p class="comment-text">韩剧网这个页面整理得挺清楚的，分类和更新列表一目了然。希望以后能加上每部剧的编剧和导演信息。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">路</div><span class="comment-nick">路人甲</span><span class="comment-date">2026-10-29</span></div>
+          <p class="comment-text">最近剧荒，靠这个页面找到了《无声证词》，已经追平了。就是有些剧的播放平台不太好找，希望多点指引。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">吐</div><span class="comment-nick">吐槽役</span><span class="comment-date">2026-10-28</span></div>
+          <p class="comment-text">《花郎之恋》的剪辑有点跳跃，有时候情绪还没到位就切下一场了。不过男女主颜值在线，还能继续看。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">安</div><span class="comment-nick">安利君</span><span class="comment-date">2026-10-27</span></div>
+          <p class="comment-text">强烈推荐《我的解放日志2》给所有打工人，台词真的写到心坎里了。韩剧网这个推荐列表很靠谱。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">比</div><span class="comment-nick">比较文学</span><span class="comment-date">2026-10-26</span></div>
+          <p class="comment-text">感觉最近韩剧悬疑题材扎堆，审美有点疲劳。希望多出点像《九尾狐餐厅》这样的轻松喜剧换换口味。</p>
+        </div>
+        <div class="comment-item">
+          <div class="comment-head"><div class="comment-avatar">期</div><span class="comment-nick">期待新剧</span><span class="comment-date">2026-10-25</span></div>
+          <p class="comment-text">听说12月还有几部大制作要上，韩剧网到时候会更新吗？希望多关注一下金恩淑编剧的新作。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关资讯 -->
+    <section id="news-stream">
+      <div class="section-header">
+        <h2>相关资讯 · 韩剧动态速递</h2>
+        <span class="more-link">更多资讯 →</span>
+      </div>
+      <div class="news-grid">
+        <article class="news-card">
+          <div class="news-date">2026-11-07</div>
+          <h4>《首尔月光》收视率持续走高，第12集突破12%</h4>
+          <p>由新生代演员主演的浪漫爱情剧《首尔月光》本周收视率再创新高，第12集全国基准达到12.3%。剧情进入后半段，男女主关系走向成为观众热议焦点。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-06</div>
+          <h4>《无声证词》制作方确认将制作第二季</h4>
+          <p>悬疑剧《无声证词》凭借紧凑剧情和演员出色表现收获高口碑，制作方今日宣布已着手筹备第二季，预计2027年下半年回归。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-05</div>
+          <h4>《花郎之恋》古装造型获好评，韩服设计引关注</h4>
+          <p>《花郎之恋》的服装设计团队近日接受采访，透露为还原历史细节参考了大量文献。剧中花郎服饰成为社交平台讨论热点。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-04</div>
+          <h4>《我的解放日志2》台词引发职场人共鸣</h4>
+          <p>第二季延续前作写实风格，最新一集关于“工作意义”的长台词被大量转发，不少观众表示“像在演我”。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-03</div>
+          <h4>《九尾狐餐厅》确定加播两集，观众反响热烈</h4>
+          <p>原定12集的奇幻喜剧《九尾狐餐厅》因播出后反响超出预期，制作方决定增加两集，深入展开配角故事线。</p>
+        </article>
+        <article class="news-card">
+          <div class="news-date">2026-11-02</div>
+          <h4>2026韩剧年度盘点：类型融合成主流趋势</h4>
+          <p>据韩国电视剧制作协会数据，今年超过60%的新剧尝试类型融合，爱情+悬疑、古装+奇幻成为热门组合，海外版权销售同比增长明显。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      <div>© 2026 韩剧网 · 内容专题演示页面 | 本站不提供在线播放，仅做信息整理</div>
+      <div class="footer-links">
+        <a href="/#hot-recommend">热门推荐</a>
+        <a href="/#latest-update">更新日历</a>
+        <a href="/#deep-analysis">深度解析</a>
+        <a href="/#faq-section">常见问题</a>
+        <a href="/#news-stream">资讯</a>
+        <a href="/#community-comments">评论</a>
+      </div>
+    </footer>
+  </div>
+</body>
+  </html>
